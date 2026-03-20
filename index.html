@@ -19,7 +19,6 @@
       <li><a href="#sessions">Sessions</a></li>
       <li><a href="#approach">Approach</a></li>
       <li><a href="#ending">Ending Therapy</a></li>
-      <li><a href="blog.html">Articles</a></li>
       <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
     </ul>
   </nav>
@@ -36,8 +35,8 @@
       <p class="hero-body">
         Life can feel overwhelming — relationships, anxiety, loss, work pressure, identity.
         Sometimes you just need somewhere to bring it all, without judgement.
-        Thinking Space Counselling offers warm, person-centred therapy in a calm,
-        confidential setting.
+        I offer a warm, integrative approach, drawing on different therapeutic styles
+        to support you in a calm, confidential setting.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Book a Consultation</a>
@@ -56,7 +55,7 @@
   <div class="ticker" aria-hidden="true">
     <div class="ticker-track">
       <span>Confidential &amp; Non-Judgemental</span>
-      <span>Person-Centred Approach</span>
+      <span>Integrative Approach</span>
       <span>Based in Studley, Warwickshire</span>
       <span>Flexible Appointment Times</span>
       <span>Qualified &amp; Insured Counsellor</span>
@@ -69,7 +68,7 @@
       <span>Taking New Clients Now</span>
       <!-- duplicate for seamless loop -->
       <span>Confidential &amp; Non-Judgemental</span>
-      <span>Person-Centred Approach</span>
+      <span>Integrative Approach</span>
       <span>Based in Studley, Warwickshire</span>
       <span>Flexible Appointment Times</span>
       <span>Qualified &amp; Insured Counsellor</span>
@@ -180,17 +179,24 @@
   <section class="approach" id="approach">
     <div class="approach-left fade-in">
       <p class="section-label">How I Work</p>
-      <h2 class="section-heading">A <em>person-centred</em><br/>approach</h2>
+      <h2 class="section-heading">A warm, <em>integrative</em><br/>approach</h2>
       <div class="approach-body">
         <p>
-          At the heart of everything I do is a deep belief that you are the expert on your own
-          life. My role is to create the conditions where you feel safe enough to explore, reflect,
-          and grow — not to tell you what to think or how to feel.
+          I don't believe one size fits all when it comes to therapy. People are different,
+          their experiences are different, and what helps one person may not help another.
+          That's why I work integratively — drawing on different therapeutic styles and
+          adapting how I work to what feels right for you.
         </p>
         <p>
-          Sessions draw on a range of therapeutic approaches, always tailored to what feels right
-          for you. Whether you need space to process, practical tools to cope, or both — we'll
-          find the rhythm that works.
+          What that means in practice is that our sessions won't follow a rigid formula.
+          If something isn't working, we change it. If a particular approach resonates
+          with you, we lean into it. You're not here to fit my way of working —
+          my way of working adapts to fit you.
+        </p>
+        <p>
+          At the heart of everything though is the relationship between us. Feeling genuinely
+          heard and accepted — without judgement, without agenda — is often where
+          the real work begins.
         </p>
       </div>
     </div>
@@ -262,20 +268,6 @@
     </div>
   </section>
 
-  <!-- LATEST POSTS -->
-  <section class="latest-posts" id="articles">
-    <div class="latest-posts-header fade-in">
-      <p class="section-label">Articles &amp; Resources</p>
-      <h2 class="section-heading">Latest from <em>the blog</em></h2>
-    </div>
-    <div class="latest-posts-grid" id="latest-posts-grid">
-      <!-- populated by JS -->
-    </div>
-    <div class="latest-posts-footer fade-in">
-      <a href="blog.html" class="btn-secondary">View all articles</a>
-    </div>
-  </section>
-
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="contact-left fade-in">
@@ -321,27 +313,9 @@
 
   <!-- EMAIL -->
   <script>
-    const _u = 'my.cobs', _d = 'gmail.com';
+    const _u = 'lucy', _d = 'thinkingspacecounselling.co.uk';
     const emailEl = document.getElementById('contact-email');
     if (emailEl) { emailEl.href = 'mailto:' + _u + '@' + _d; emailEl.textContent = _u + '@' + _d; }
     const btnEl = document.getElementById('mailto-btn');
     if (btnEl) { btnEl.href = 'mailto:' + _u + '@' + _d + '?subject=Thinking%20Space%20Counselling%20Enquiry'; }
-  </script>  <script>
-    fetch('posts.json')
-      .then(r => r.json())
-      .then(posts => {
-        const grid = document.getElementById('latest-posts-grid');
-        if (!grid) return;
-        posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-        const top3 = posts.slice(0, 3);
-        grid.innerHTML = top3.map(p => `
-          <article class="latest-post-card">
-            <p class="blog-category">${p.category}</p>
-            <h3>${p.title}</h3>
-            <p>${p.excerpt}</p>
-            <a href="posts/${p.slug}.html" class="blog-read-more">Read more</a>
-          </article>
-        `).join('');
-      })
-      .catch(() => {});
   </script>
