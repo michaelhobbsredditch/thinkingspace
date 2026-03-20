@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- EDIT: Update title and description for each post -->
+  <title>POST TITLE HERE | Thinking Space Counselling</title>
+  <meta name="description" content="POST EXCERPT HERE" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../styles.css"/>
+  <style>
+    .post-hero {
+      padding: 10rem 6rem 4rem;
+      background: var(--white);
+      max-width: 860px;
+    }
+    .post-meta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    .post-category {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--burnt);
+    }
+    .post-date {
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: var(--mid);
+    }
+    .post-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--charcoal);
+      margin-bottom: 1.2rem;
+    }
+    .post-title em { font-style: italic; color: var(--burnt); }
+    .post-excerpt {
+      font-size: 1.1rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--mid);
+    }
+    .post-body {
+      padding: 4rem 6rem 6rem;
+      background: var(--cream);
+    }
+    .post-content {
+      max-width: 720px;
+    }
+    .post-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 300;
+      color: var(--charcoal);
+      margin: 2.5rem 0 1rem;
+      line-height: 1.2;
+    }
+    .post-content h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--charcoal);
+      margin: 2rem 0 0.8rem;
+    }
+    .post-content p {
+      font-size: 0.98rem;
+      font-weight: 300;
+      line-height: 1.95;
+      color: var(--mid);
+      margin-bottom: 1.4rem;
+    }
+    .post-content blockquote {
+      border-left: 3px solid var(--peach);
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      background: var(--white);
+      border-radius: 0 4px 4px 0;
+    }
+    .post-content blockquote p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--charcoal);
+      margin: 0;
+    }
+    .post-content ul, .post-content ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.4rem;
+    }
+    .post-content li {
+      font-size: 0.98rem;
+      font-weight: 300;
+      line-height: 1.9;
+      color: var(--mid);
+      margin-bottom: 0.4rem;
+    }
+    .post-footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--sand);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .post-footer a {
+      color: var(--burnt);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      border-bottom: 1px solid var(--peach);
+      padding-bottom: 2px;
+    }
+    .post-footer a:hover { border-color: var(--burnt); }
+    .post-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .post-author img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .post-author-name {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--charcoal);
+    }
+    .post-author-title {
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: var(--mid);
+    }
+    @media (max-width: 900px) {
+      .post-hero { padding: 8rem 2rem 3rem; }
+      .post-body { padding: 3rem 2rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <a href="../index.html"><img src="../1000551404.jpg" alt="Thinking Space Counselling" /></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#sessions">Sessions</a></li>
+      <li><a href="../index.html#approach">Approach</a></li>
+      <li><a href="../blog.html">Articles</a></li>
+      <li><a href="../index.html#contact" class="nav-cta">Get in Touch</a></li>
+    </ul>
+  </nav>
+
+  <!-- POST HEADER -->
+  <div class="post-hero">
+    <!-- EDIT: Update category, date and title -->
+    <div class="post-meta">
+      <span class="post-category">CATEGORY HERE</span>
+      <span class="post-date">DAY MONTH YEAR</span>
+    </div>
+    <h1 class="post-title">POST TITLE HERE</h1>
+    <p class="post-excerpt">POST EXCERPT / INTRO SENTENCE HERE</p>
+  </div>
+
+  <!-- POST BODY -->
+  <div class="post-body">
+    <div class="post-content">
+
+      <!-- =====================================================
+           PASTE YOUR ARTICLE CONTENT BELOW THIS LINE
+           Use <p> for paragraphs
+           Use <h2> for main section headings
+           Use <h3> for sub headings
+           Use <blockquote><p>...</p></blockquote> for quotes
+           Use <ul><li>...</li></ul> for bullet lists
+           ===================================================== -->
+
+      <p>Your first paragraph goes here.</p>
+
+      <h2>A Section Heading</h2>
+
+      <p>More content here.</p>
+
+      <blockquote>
+        <p>A meaningful quote or key insight can go here.</p>
+      </blockquote>
+
+      <p>Continue your article here.</p>
+
+      <!-- =====================================================
+           PASTE YOUR ARTICLE CONTENT ABOVE THIS LINE
+           ===================================================== -->
+
+      <div class="post-footer">
+        <a href="../blog.html">← Back to all articles</a>
+        <div class="post-author">
+          <img src="../lucy.jpg" alt="Lucy" />
+          <div>
+            <div class="post-author-name">Lucy</div>
+            <div class="post-author-title">Counsellor, Thinking Space</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="../1000551404.jpg" alt="Thinking Space Counselling" />
+    <p>© 2025 Thinking Space Counselling &nbsp;·&nbsp; Studley, Warwickshire &nbsp;·&nbsp; All rights reserved</p>
+  </footer>
+
+</body>
+</html>
