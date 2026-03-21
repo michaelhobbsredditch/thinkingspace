@@ -163,7 +163,19 @@
       <li><a href="index.html#fees">Fees</a></li>
       <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
     </ul>
+    <button class="nav-hamburger" onclick="document.getElementById('mobileNav').classList.add('open')" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+  <!-- MOBILE NAV -->
+  <div class="nav-mobile" id="mobileNav">
+    <button class="nav-mobile-close" onclick="document.getElementById('mobileNav').classList.remove('open')" aria-label="Close menu">&times;</button>
+    <a href="#how-it-works" onclick="document.getElementById('mobileNav').classList.remove('open')">How It Works</a>
+    <a href="#faqs" onclick="document.getElementById('mobileNav').classList.remove('open')">FAQs</a>
+    <a href="index.html#fees">Fees</a>
+    <a href="index.html">Face to Face</a>
+    <a href="#contact" class="nav-cta" onclick="document.getElementById('mobileNav').classList.remove('open')">Get in Touch</a>
+  </div>
 
   <!-- HERO -->
   <section class="online-hero">
