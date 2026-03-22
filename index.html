@@ -26,6 +26,7 @@
       <li><a href="#sessions">Sessions</a></li>
       <li><a href="#fees">Fees</a></li>
       <li><a href="online-counselling.html">Online Sessions</a></li>
+      <li><a href="blog.html">Articles</a></li>
       <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
     </ul>
     <button class="nav-hamburger" onclick="document.getElementById('mobileNav').classList.add('open')" aria-label="Open menu">
@@ -40,6 +41,7 @@
     <a href="#sessions" onclick="document.getElementById('mobileNav').classList.remove('open')">Sessions</a>
     <a href="#fees" onclick="document.getElementById('mobileNav').classList.remove('open')">Fees</a>
     <a href="online-counselling.html">Online Sessions</a>
+    <a href="blog.html">Articles</a>
     <a href="#contact" class="nav-cta" onclick="document.getElementById('mobileNav').classList.remove('open')">Get in Touch</a>
   </div>
 
@@ -300,6 +302,20 @@
     </div>
   </section>
 
+  <!-- LATEST ARTICLES -->
+  <section class="latest-posts" id="articles">
+    <div class="latest-posts-header fade-in">
+      <p class="section-label">Articles &amp; Resources</p>
+      <h2 class="section-heading">Latest from <em>the blog</em></h2>
+    </div>
+    <div class="latest-posts-grid" id="latest-posts-grid">
+      <!-- populated by JS -->
+    </div>
+    <div class="latest-posts-footer fade-in">
+      <a href="blog.html" class="btn-secondary">View all articles</a>
+    </div>
+  </section>
+
   <!-- ONLINE NUDGE -->
   <section class="local-nudge fade-in">
     <p class="section-label">Can't Make It In Person?</p>
@@ -364,5 +380,28 @@
     if (btnEl) { btnEl.href = 'mailto:' + _u + '@' + _d + '?subject=Thinking%20Space%20Counselling%20Enquiry'; }
   </script>
 
+
+  <!-- LATEST POSTS -->
+  <script>
+    fetch('posts.json')
+      .then(r => r.json())
+      .then(posts => {
+        const grid = document.getElementById('latest-posts-grid');
+        if (!grid || !posts || !posts.length) return;
+        posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+        const top = posts.slice(0, 3);
+        const count = top.length;
+        grid.className = 'latest-posts-grid cols-' + count;
+        grid.innerHTML = top.map(p => `
+          <article class="latest-post-card">
+            <p class="blog-category">${p.category}</p>
+            <h3>${p.title}</h3>
+            <p>${p.excerpt}</p>
+            <a href="posts/${p.slug}.html" class="blog-read-more">Read more</a>
+          </article>
+        `).join('');
+      })
+      .catch(() => {});
+  </script>
 </body>
 </html>
