@@ -140,8 +140,9 @@
       color: var(--mid);
     }
     @media (max-width: 900px) {
-      .post-hero { padding: 8rem 2rem 3rem; }
-      .post-body { padding: 3rem 2rem 4rem; }
+      .post-hero { padding: 4.5rem 2rem 2rem; }
+      .post-body { padding: 2.5rem 2rem 3rem; }
+      .post-footer { flex-direction: column; gap: 1.5rem; }
     }
   </style>
 </head>
@@ -154,12 +155,29 @@
     </div>
     <ul class="nav-links">
       <li><a href="../index.html#about">About</a></li>
-      <li><a href="../index.html#sessions">Sessions</a></li>
       <li><a href="../index.html#approach">Approach</a></li>
-      <li><a href="../blog.html">Articles</a></li>
+      <li><a href="../index.html#sessions">Sessions</a></li>
+      <li><a href="../index.html#fees">Fees</a></li>
+      <li><a href="../online-counselling.html">Online Sessions</a></li>
       <li><a href="../index.html#contact" class="nav-cta">Get in Touch</a></li>
     </ul>
+    <button class="nav-hamburger" onclick="document.getElementById('mobileNav').classList.add('open')" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="nav-mobile" id="mobileNav">
+    <button class="nav-mobile-close" onclick="document.getElementById('mobileNav').classList.remove('open')" aria-label="Close menu">&times;</button>
+    <a href="../index.html" onclick="document.getElementById('mobileNav').classList.remove('open')">Home</a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#approach">Approach</a>
+    <a href="../index.html#sessions">Sessions</a>
+    <a href="../index.html#fees">Fees</a>
+    <a href="../online-counselling.html">Online Sessions</a>
+    <a href="../blog.html">Articles</a>
+    <a href="../index.html#contact" class="nav-cta">Get in Touch</a>
+  </div>
 
   <!-- POST HEADER -->
   <div class="post-hero">
