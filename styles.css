@@ -236,7 +236,10 @@ nav {
 .lucy-image-wrap::before {
   content: '';
   position: absolute;
-  inset: -12px -12px 12px 12px;
+  top: 12px;
+  left: 12px;
+  right: -12px;
+  bottom: -12px;
   border: 2px solid var(--peach);
   border-radius: 4px;
   z-index: 0;
