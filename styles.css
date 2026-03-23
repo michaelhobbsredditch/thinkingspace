@@ -234,15 +234,7 @@ nav {
   position: relative;
 }
 .lucy-image-wrap::before {
-  content: '';
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  width: 100%;
-  height: 100%;
-  border: 2px solid var(--peach);
-  border-radius: 4px;
-  z-index: 0;
+  display: none;
 }
 .lucy-image-wrap img {
   position: relative;
